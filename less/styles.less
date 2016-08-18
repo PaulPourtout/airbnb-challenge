@@ -32,6 +32,10 @@ body {
   //   padding: 0 10px;
   // }
 
+  #navModal {
+    display: none;
+  }
+
   form {
 
     input {
@@ -43,8 +47,8 @@ body {
       box-shadow: none;
 
     }
-  }
-}
+  } //FIN FORM
+} //FIN NAVTOP
 
 
 header {
@@ -119,10 +123,10 @@ header {
         &:hover {
           background-color: lighten(@pink, 10%);
         }
-      }
-    }
-  }
-}
+      } //FIN BOUTON
+    } // FIN INPUT GROUP
+  } // FIN NAV HEADER
+} // FIN HEADER
 
 
 
@@ -186,7 +190,20 @@ header {
     }
   }
 
-
+  #estimer {
+    height: 344px;
+    #estimerIllustration {
+      background-image: url(../img/host-banner.jpg);
+    }
+    #estimerText {
+  background-color: lighten(@grey, 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+box-sizing: border-box;
+padding: 35px;
+    }
+  }
 
 
 

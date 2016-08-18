@@ -47,21 +47,18 @@
           </div>
         </form>
         <ul class="nav navbar-nav navbar-right">
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Devenez hôte<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Aide</a></li>
-              <li><a href="#">Inscription</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">Connexion</a></li>
-            </ul>
-          </li>
+          <li><a href="#">Devenez hôte</a></li>
           <li><a href="#">Aide</a></li>
           <li><a href="#">Inscription</a></li>
           <li><a href="#">Connexion</a></li>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
+
+    <!-- MODAL HOVER FIRST LINK -->
+    <div id="navModal" class="">
+      <p>Si vous partagiez votre logement à Versailles, vous pourriez gagner 232€ en une semaine. Devenez hôte.</p>
+    </div>
   </nav>
 
 
@@ -88,8 +85,14 @@
       <div class="container">
         <!-- ESTIMER REVENUS -->
         <div id="estimer" class="col-md-12">
-          <figure class="col-md-8"></figure>
-          <div class="col-md-4">
+          <div class="illustration-container col-md-8">
+            <a href="#" id="estimerIllustration" class="illustration" ></a>
+          </div>
+
+          <div id="estimerText" class="col-md-4 illustration-container">
+            <h4>Ouvrez la porte à un voyageur et à une nouvelle vie</h4>
+            <p>Gagnez de l'argent en accueillant des voyageurs.</p>
+            <a class="bouton" href="#">Estimer mes revenus</a>
           </div>
         </div><!-- /ESTIMER -->
 
@@ -99,19 +102,19 @@
           <p class="text-center">Découvrez de nouveaux logements incroyables près de chez vous.</p>
 
           <div class="col-md-4 illustration-container">
-            <a href="#" id="lille" class="illustration carre col-md-12">
+            <a href="#" id="lille" class="illustration col-md-12">
               <p>Lille</p>
             </a>
           </div>
 
           <div class="col-md-4 illustration-container">
-            <a href="#" id="bruxelles" class="illustration carre col-md-12">
+            <a href="#" id="bruxelles" class="illustration col-md-12">
               <p>Bruxelles</p>
             </a>
           </div>
 
           <div class="col-md-4 illustration-container">
-            <a href="#" id="londres" class="illustration carre col-md-12">
+            <a href="#" id="londres" class="illustration col-md-12">
               <p>Londres</p>
             </a>
           </div>
@@ -132,13 +135,13 @@
 
           <div class="row">
             <div class="col-md-8 illustration-container">
-              <a href="#" id="lisbonne" class="illustration carre col-md-12">
+              <a href="#" id="lisbonne" class="illustration col-md-12">
                 <p>Lisbonne</p>
               </a>
             </div>
 
             <div class="col-md-4 illustration-container">
-              <a id="parigot" class="illustration carre col-md-12">
+              <a id="parigot" class="illustration col-md-12">
                 <p class="text-center">Chez la famille Parigot</p>
               </a>
             </div>
@@ -150,19 +153,19 @@
 
           <div class="row">
             <div class="col-md-4 illustration-container">
-              <a href="#" id="amsterdam" class="illustration carre col-md-12">
+              <a href="#" id="amsterdam" class="illustration col-md-12">
                 <p>Amsterdam</p>
               </a>
             </div>
 
             <div class="col-md-4 illustration-container">
-              <a href="#" id="newYork" class="illustration carre col-md-12">
+              <a href="#" id="newYork" class="illustration col-md-12">
                 <p>New York</p>
               </a>
             </div>
 
             <div class="col-md-4 illustration-container">
-              <a href="#" id="venise" class="illustration carre col-md-12">
+              <a href="#" id="venise" class="illustration col-md-12">
                 <p>Escapade romantique à Venise</p>
               </a>
             </div>
@@ -175,35 +178,35 @@
           <div class="row">
 
             <div class="col-md-4 illustration-container">
-              <a href="#" id="bruxelles" class="illustration carre col-md-12">
+              <a href="#" id="bruxelles" class="illustration col-md-12">
                 <p>Bruxelles</p>
               </a>
             </div>
 
             <div class="col-md-8 illustration-container">
-              <a href="#" id="rome" class="illustration carre col-md-12">
+              <a href="#" id="rome" class="illustration col-md-12">
                 <p>Rome</p>
               </a>
             </div>
 
           </div>
 
-<!-- ROW -->
+          <!-- ROW -->
           <div class="row">
             <div class="col-md-4 illustration-container">
-              <a href="#" id="berlin" class="illustration carre col-md-12">
+              <a href="#" id="berlin" class="illustration col-md-12">
                 <p>Berlin</p>
               </a>
             </div>
 
             <div class="col-md-4 illustration-container">
-              <a href="#" id="bordeaux" class="illustration carre col-md-12">
+              <a href="#" id="bordeaux" class="illustration col-md-12">
                 <p>Bordeaux</p>
               </a>
             </div>
 
             <div class="col-md-4 illustration-container">
-              <a href="#" id="biarritz" class="illustration carre col-md-12">
+              <a href="#" id="biarritz" class="illustration col-md-12">
                 <p>Surf à Biarritz</p>
               </a>
             </div>
