@@ -1,0 +1,216 @@
+// out: ../css/styles.css, sourcemap: true, compress: true
+
+@grey : #484848;
+@pink : #FF5A5F;
+@blue : #007A87;
+@purple : #7B0051;
+@shadow-black : rgba(0, 0, 0, 0.80);
+
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#navTop {
+  background-color: lighten(@grey, 100%);
+  border-bottom: 1px solid lighten(@grey, 50%);
+
+  .navbar-brand {
+    background-image: url(../img/logo-airbnb.png);
+    height: 31px;
+    width: 100px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin: 10px 0;
+  }
+
+
+  //  {
+  //   border-right: 1px solid lighten(@grey, 50%);
+  //   padding: 0 10px;
+  // }
+
+  form {
+
+    input {
+      border: none;
+      background-image: url(../img/search.png);
+      background-repeat: no-repeat;
+      background-position: 5px 5px;
+      padding: 0 35px;
+      box-shadow: none;
+
+    }
+  }
+}
+
+
+header {
+  background-image: url(../img/header-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: lighten(@grey, 100%);
+
+  .header-content {
+    h2 {
+      font-size: 5rem;
+      text-transform: uppercase;
+    }
+
+    h2, p {
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 1.6rem;
+      margin: 50px 0;
+    }
+
+    .bouton {
+      background-color:  lighten(@grey, 100%);
+      color:  darken(@grey, 10%);
+      border-radius: 1.5px;
+      padding: 10px 25px;
+      font-weight: bold;
+    }
+  }
+
+
+  #navHeader {
+    background-color: @shadow-black;
+
+    padding: 15px;
+    width: 100%;
+
+    .input-group {
+      // display: flex;
+      // align-items: center;
+
+      .form-control {
+        width: 100%;
+      }
+
+      .dropdown-menu li a {
+        &:hover {
+          background-color: @pink !important;
+          color: lighten(@grey, 100%) !important;
+        }
+      }
+
+
+      .bouton {
+        color: lighten(@grey, 100%);
+        background-color: @pink;
+        border: none;
+        padding: 10px;
+        border-radius: 0 2px 2px 0;
+        font-weight: bold;
+        box-shadow: 0 2px 0 darken(@pink, 20%);
+        transition: 0.2s ease;
+        &:hover {
+          background-color: lighten(@pink, 10%);
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+// MAIN
+
+#main {
+  background-color: lighten(@grey, 55%);
+
+
+  // ESTIMER
+
+
+
+
+  // WEEKEND
+
+  .illustration-container {
+    height: 344px;
+
+    .illustration {
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 344px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      p {
+        color: lighten(@grey, 100%);
+        font-size: 3rem;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .bouton {
+      color: @grey;
+      background-color: lighten(@grey, 100%);
+      font-weight: bold;
+      padding: 10px 50px;
+      margin: 50px 0;
+      border-radius: 2px;
+      border: 1px solid lighten(@grey, 40%);
+      transition: 0.2s;
+      
+      &:hover {
+        text-decoration: none;
+        border-color: lighten(@grey, 30%);
+      }
+    }
+  }
+
+
+
+
+
+
+
+  #weekend {
+    h3 {
+      font-weight: bold;
+    }
+
+    #lille {
+      background-image: url(../img/lille.jpg);
+    }
+
+    #bruxelles {
+      background-image: url(../img/bruxelles.jpg);
+    }
+
+    #londres {
+      background-image: url(../img/londres.jpg);
+    }
+
+
+  }
+
+
+
+
+
+}

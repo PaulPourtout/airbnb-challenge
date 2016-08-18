@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Challenge Airbnb</title>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="/css/master.css" media="screen" title="no title" charset="utf-8">
+</head>
+
+
+
+<body>
+
+
+  <!-- NAV TOP -->
+  <nav id="navTop" class="navbar navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+          <!-- <img src="img/logo-airbnb.png" alt="" /> -->
+        </a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <form class="navbar-form navbar-left">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Où?">
+          </div>
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Devenez hôte<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Aide</a></li>
+              <li><a href="#">Inscription</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Connexion</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Aide</a></li>
+          <li><a href="#">Inscription</a></li>
+          <li><a href="#">Connexion</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+
+
+  <header class="container-fluid">
+    <div class="header-content col-md-10 text-center">
+      <h2>Vivez là-bas</h2>
+      <p>Réservez des logements auprès d'hôtes locaux dans plus de 191 pays et vivez là-bas, comme chez vous.</p>
+      <a class="bouton" href="#">En savoir plus sur Airbnb</a>
+    </div>
+
+    <!-- BARRE RECHERCHE HEADER -->
+    <div id="navHeader" class="row">
+      <div class="col-md-12">
+
+        <input type="text" name="search"aria-label="..." />
+
+
+
+      </div>
+    </header>
+
+    <section id="main" class="container-fluid">
+      <div class="container">
+        <!-- ESTIMER REVENUS -->
+        <div id="estimer" class="col-md-12">
+          <figure class="col-md-8"></figure>
+          <div class="col-md-4">
+          </div>
+        </div><!-- /ESTIMER -->
+
+        <!-- WEEKEND -->
+        <div id="weekend" class="col-md-12">
+          <h3 class="text-center">Juste pour le week-end</h3>
+          <p class="text-center">Découvrez de nouveaux logements incroyables près de chez vous.</p>
+
+          <div class="col-md-4 illustration-container">
+            <div id="lille" class="illustration carre col-md-12">
+              <p>Lille</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 illustration-container">
+            <div id="bruxelles" class="illustration carre col-md-12">
+              <p>Bruxelles</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 illustration-container">
+            <div id="londres" class="illustration carre col-md-12">
+              <p>Londres</p>
+            </div>
+          </div>
+          <div class="btn-container col-md-12">
+            <a href="#" class="bouton">Voir toutes les destinations</a>
+          </div>
+        </div> <!-- /WEEKEND -->
+
+
+        <!-- EXPLORER -->
+        <div id="explorer" class="col-md-12">
+          <h3 class="text-center">Juste pour le week-end</h3>
+          <p class="text-center">Découvrez de nouveaux logements incroyables près de chez vous.</p>
+
+          <div class="row">
+            <div class="col-md-8 illustration-container">
+              <div id="lille" class="illustration carre col-md-12">
+                <p>Lille</p>
+              </div>
+            </div>
+
+            <div class="col-md-4 illustration-container">
+              <div id="bruxelles" class="illustration carre col-md-12">
+                <p>Bruxelles</p>
+              </div>
+            </div>
+
+          </div>
+
+
+
+
+          <div class="row">
+            <div class="col-md-4 illustration-container">
+              <div id="lille" class="illustration carre col-md-12">
+                <p>Lille</p>
+              </div>
+            </div>
+
+            <div class="col-md-4 illustration-container">
+              <div id="bruxelles" class="illustration carre col-md-12">
+                <p>Bruxelles</p>
+              </div>
+            </div>
+
+            <div class="col-md-4 illustration-container">
+              <div id="londres" class="illustration carre col-md-12">
+                <p>Londres</p>
+              </div>
+            </div>
+
+          </div>
+
+
+
+
+          <div class="row">
+
+            <div class="col-md-4 illustration-container">
+              <div id="bruxelles" class="illustration carre col-md-12">
+                <p>Bruxelles</p>
+              </div>
+            </div>
+
+            <div class="col-md-8 illustration-container">
+              <div id="londres" class="illustration carre col-md-12">
+                <p>Londres</p>
+              </div>
+            </div>
+
+          </div>
+
+<!-- ROW -->
+          <div class="row">
+            <div class="col-md-4 illustration-container">
+              <div id="lille" class="illustration carre col-md-12">
+                <p>Lille</p>
+              </div>
+            </div>
+
+            <div class="col-md-4 illustration-container">
+              <div id="bruxelles" class="illustration carre col-md-12">
+                <p>Bruxelles</p>
+              </div>
+            </div>
+
+            <div class="col-md-4 illustration-container">
+              <div id="londres" class="illustration carre col-md-12">
+                <p>Londres</p>
+              </div>
+            </div>
+
+          </div>
+
+
+
+
+          <div class="btn-container col-md-12">
+            <a href="#" class="bouton">Voir toutes les destinations</a>
+          </div>
+
+
+
+        </div> <!-- /EXPLORER -->
+
+
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+  </body>
+  </html>
