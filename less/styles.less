@@ -5,12 +5,38 @@
 @blue : #007A87;
 @purple : #7B0051;
 @shadow-black : rgba(0, 0, 0, 0.80);
+@transparentWhite : rgba(255, 255, 255, 0.3);
 
 
 body {
   margin: 0;
   padding: 0;
 }
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.bouton {
+  color: darken(@grey, 10%);
+  background-color: lighten(@grey, 100%);
+  font-weight: bold;
+  padding: 10px 50px;
+  margin: 50px 0;
+  border-radius: 2px;
+  border: 1px solid lighten(@grey, 40%);
+  transition: 0.2s;
+
+  &:hover {
+    text-decoration: none;
+    border-color: lighten(@grey, 30%);
+    color: darken(@grey, 10%);
+  }
+}
+
 
 #navTop {
   background-color: lighten(@grey, 100%);
@@ -27,10 +53,6 @@ body {
   }
 
 
-  //  {
-  //   border-right: 1px solid lighten(@grey, 50%);
-  //   padding: 0 10px;
-  // }
 
   #navModal {
     display: none;
@@ -47,8 +69,8 @@ body {
       box-shadow: none;
 
     }
-  } //FIN FORM
-} //FIN NAVTOP
+  }
+}
 
 
 header {
@@ -80,12 +102,18 @@ header {
     }
 
     .bouton {
-      background-color:  lighten(@grey, 100%);
-      color:  darken(@grey, 10%);
-      border-radius: 1.5px;
-      padding: 10px 25px;
-      font-weight: bold;
+      padding: 10px 50px;
+      margin: 50px 0;
+      border-radius: 2px;
+      border: none;
+      transition: 0.2s;
+
+      &:hover {
+        text-decoration: none;
+        border-color: none;
+      }
     }
+
   }
 
 
@@ -123,10 +151,10 @@ header {
         &:hover {
           background-color: lighten(@pink, 10%);
         }
-      } //FIN BOUTON
-    } // FIN INPUT GROUP
-  } // FIN NAV HEADER
-} // FIN HEADER
+      }
+    }
+  }
+}
 
 
 
@@ -137,33 +165,118 @@ header {
 #main {
   background-color: lighten(@grey, 55%);
 
+  .title {
 
-  // ESTIMER
+    color: darken(@grey, 4%);;
+    h3 {
+      font-weight: bold;
+      font-size: 3rem;
+      margin-top: 0;
+    }
+
+    p {
+      font-size: 1.6rem;
+    }
+  }
 
 
 
 
-  // WEEKEND
+
 
   .illustration-container {
     height: 344px;
     margin-top: 30px;
 
+
+    .rideau01 {
+      background-color: @transparentWhite;
+      height: 400px;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform:skewY(90deg);
+      transition: 0.4s ease-in-out;
+    }
+
+    .rideau02 {
+      background-color: @transparentWhite;
+      height: 400px;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform:skewY(90deg);
+      transition: 0.4s ease-in-out;
+      transition-delay: 0.1s;
+    }
+
+    .rideau03 {
+      background-color: @transparentWhite;
+      height: 400px;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform:skewY(-90deg);
+      transition: 0.4s ease-in-out;
+      transition-delay: 0.2s;
+    }
+
+
+    :hover {
+      .rideau01 {
+        transform:skewY(180deg);
+
+      }
+
+      .rideau02 {
+        transform:skewY(120deg);
+      }
+
+      .rideau03 {
+        transform:skewY(-130deg);
+      }
+
+      p {
+        color: darken(@grey, 20%);
+      }
+    }
+
+
+
     .illustration {
       background-repeat: no-repeat;
       background-size: cover;
 
+      overflow: hidden;
+
       height: 344px;
       width: 100%;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-
-
+      color: lighten(@grey, 100%);
+      text-align: center;
       p {
-        color: lighten(@grey, 100%);
+        z-index: 5;
         font-size: 3rem;
         font-weight: bold;
+        margin: 0;
+        transition: 0.3s ease;
+      }
+
+      h4 {
+        font-size: 2.3rem;
+        font-weight: bold;
+        margin: 10px 0 0 0;
+      }
+
+      h5 {
+        font-size: 1.5rem;
+        margin: 0;
       }
     }
   }
@@ -190,18 +303,37 @@ header {
     }
   }
 
+
+  // ESTIMER
+
   #estimer {
     height: 344px;
+    margin: 20px 0 50px 0;
     #estimerIllustration {
       background-image: url(../img/host-banner.jpg);
+      background-size: cover !important;
     }
     #estimerText {
-  background-color: lighten(@grey, 100%);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-box-sizing: border-box;
-padding: 35px;
+      background-color: lighten(@grey, 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      box-sizing: border-box;
+      padding: 35px;
+
+      .bouton {
+        color: lighten(@grey, 100%);
+        background-color: @blue;
+        border: none;
+        padding: 10px;
+        border-radius: 0 2px 2px 0;
+        font-weight: bold;
+        box-shadow: 0 2px 0 darken(@blue, 20%);
+        transition: 0.2s ease;
+        &:hover {
+          background-color: lighten(@blue, 7%);
+        }
+      }
     }
   }
 
@@ -210,9 +342,6 @@ padding: 35px;
 
 
   #weekend {
-    h3 {
-      font-weight: bold;
-    }
 
     #lille {
       background-image: url(../img/lille.jpg);
@@ -229,6 +358,20 @@ padding: 35px;
 
   // PARTIE EXPLORER
   #explorer {
+    .hote-picture {
+      height: 56px;
+      width: 56px;
+      background-size: 56px 56px;
+      border-radius: 200px;
+      background-repeat: no-repeat;
+      background-position: -3px 0;
+      margin-bottom: 10px;
+      border: 3px solid lighten(@grey, 100%);
+    }
+
+
+
+
     #lisbonne {
       background-image: url(../img/lisbonne.jpg);
 
@@ -236,6 +379,10 @@ padding: 35px;
 
     #parigot {
       background-image: url(../img/chezFamilleParigot.jpg);
+
+      #id-parigot {
+        background-image: url(../img/id-famille-parigot.jpg);
+      }
     }
 
     #amsterdam{
@@ -255,6 +402,14 @@ padding: 35px;
       background-image: url(../img/rome.jpg);
     }
 
+    #stockholm {
+      background-image: url(../img/chez-moa.jpg);
+
+      #id-moa {
+        background-image: url(../img/id-moa.jpg);
+      }
+    }
+
     #berlin {
       background-image: url(../img/berlin.jpg);
     }
@@ -270,6 +425,131 @@ padding: 35px;
 
     } //FIN EXPLORER
 
-
-
     } // FIN MAIN
+
+    #carousel {
+      color: lighten(@grey, 100%);
+      background-image: url(../img/carrousel-bg01.jpg);
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      h2 {
+        font-size: 7rem;
+        font-weight: bold;
+      }
+      p {
+        font-size: 2rem;
+        font-weight: 400;
+      }
+
+      .fa-play-circle {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 9rem;
+      }
+    }
+
+    #communaute {
+      a {
+        color: lighten(@grey, 100%);
+      }
+      .card {
+
+        height: 492px;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+        transition: 0.3s;
+        &:hover {
+          filter: brightness(80%);
+        }
+        .etiquette {
+          padding: 10px;
+          font-weight: bold;
+        }
+
+        .card-text {
+          height: 200px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          margin-bottom: 20px;
+
+          h3 {
+            margin-top: 0;
+            font-weight: bold;
+            font-size: 3rem;
+          }
+        }
+
+      
+      }
+
+      #card01 {
+        background-color: lighten(@blue, 10%);
+
+        figure {
+          background-image: url(../img/create-airbnb.png);
+          background-position: center;
+          background-size: contain;
+          height: 270px;
+          width: 234px;
+          background-repeat: no-repeat;
+        }
+
+        .card-text {
+          height: 155px;
+        }
+      }
+
+      #card02 {
+        background-image: url(../img/garry.jpg);
+
+        .etiquette {
+          background-color: @blue;
+        }
+      }
+
+      #card03 {
+        background-image: url(../img/entreprise.jpg);
+
+        .etiquette {
+          background-color: @grey;
+        }
+      }
+
+      #card04 {
+        background-image: url(../img/patricia.jpg);
+
+        .etiquette {
+          background-color: @purple;
+        }
+      }
+    }
+
+    footer {
+      background-image: url(../img/footer-bg.png), linear-gradient(darken(@grey, 10%), darken(@grey, 10%));
+      background-size: 40%;
+      width: 100%;
+      padding: 30px 0;
+      margin: 20px 0;
+      color: lighten(@grey, 100%);
+      a {
+        color: lighten(@grey, 100%);
+      }
+
+
+
+      .icon {
+        border: 1px solid lighten(@grey, 40%);
+        border-radius: 200px;
+      }
+    }
