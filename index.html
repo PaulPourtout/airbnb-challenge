@@ -46,39 +46,59 @@
             <input type="text" class="form-control" placeholder="Où?">
           </div>
         </form>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Devenez hôte</a></li>
+        <ul id="menu-top" class="nav navbar-nav navbar-right">
+          <li><a id="become" href="#">Devenez hôte</a></li>
           <li><a href="#">Aide</a></li>
           <li><a href="#">Inscription</a></li>
           <li><a href="#">Connexion</a></li>
         </ul>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
 
-    <!-- MODAL HOVER FIRST LINK -->
-    <div id="navModal" class="">
-      <p>Si vous partagiez votre logement à Versailles, vous pourriez gagner 232€ en une semaine. Devenez hôte.</p>
-    </div>
-  </nav>
+        <!-- MODAL HOVER FIRST LINK -->
+        <div class="navModal">
+          <p>Si vous partagiez votre logement à Versailles, vous pourriez gagner 232€ en une semaine. <br>
+            Devenez hôte.</p>
+          </div>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
 
 
 
-  <header class="container-fluid">
-    <div class="header-content col-md-10 text-center">
-      <h2>Vivez là-bas</h2>
-      <p>Réservez des logements auprès d'hôtes locaux dans plus de 191 pays et vivez là-bas, comme chez vous.</p>
-      <a class="bouton" href="#">En savoir plus sur Airbnb</a>
-    </div>
+    </nav>
 
-    <!-- BARRE RECHERCHE HEADER -->
-    <div id="navHeader" class="row">
-      <div class="col-md-12">
 
-        <input type="text" name="search"aria-label="..." />
 
+    <header class="container-fluid">
+
+
+      <div class="header-content col-md-12 text-center">
+        <h2>Vivez là-bas</h2>
+        <p>Réservez des logements auprès d'hôtes locaux dans plus de 191 pays et vivez là-bas, comme chez vous.</p>
+        <a class="bouton" href="#">En savoir plus sur Airbnb</a>
+      </div>
+
+      <!-- BARRE RECHERCHE HEADER -->
+      <div id="navHeader" class="col-md-12">
+
+        <div id="input-group" class="col-md-12">
+          <input type="text" name="search"aria-label="..." />
+          <div id="depart">
+            <p>
+              Départ<span><i class="fa fa-arrow-right"></i></span>
+            </p>
+
+            <p>
+              Arrivé
+            </p>
+          </div>
+
+
+
+
+        </div>
 
 
       </div>
+
     </header>
 
     <section id="main" class="container-fluid">
@@ -177,6 +197,15 @@
             <div class="col-md-8 illustration-container">
               <a href="#" id="lisbonne" class="illustration col-md-12">
                 <p>Lisbonne</p>
+
+                <div class="rideau01">
+                </div>
+
+                <div class="rideau02">
+                </div>
+
+                <div class="rideau03">
+                </div>
               </a>
             </div>
 
@@ -201,7 +230,7 @@
             </div>
 
             <div class="col-md-4 illustration-container">
-              <a href="#" id="newYork" class="illustration col-md-12">
+              <a href="#" id="newYork" class="illustration lighten-image col-md-12">
                 <p>New York</p>
               </a>
             </div>
@@ -224,12 +253,22 @@
                 <figure id="id-moa" class="hote-picture"></figure>
                 <h4>Chez Moa</h4>
                 <h5>Stockholm</h5>
+
               </a>
             </div>
 
             <div class="col-md-8 illustration-container">
               <a href="#" id="rome" class="illustration col-md-12">
                 <p>Rome</p>
+
+                <div class="rideau01">
+                </div>
+
+                <div class="rideau02">
+                </div>
+
+                <div class="rideau03">
+                </div>
               </a>
             </div>
 
@@ -359,10 +398,10 @@
       <div class="container">
         <div class="col-md-10 col-md-offset-1">
 
-          <div class="col-md-6">
+          <div class="col-md-5">
             <div class="dropdown">
-              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                Dropdown
+              <button class="btn btn-default dropdown-toggle menu-langue-devise" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Français
                 <span class="caret"></span>
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
@@ -375,8 +414,8 @@
             </div>
 
             <div class="dropdown">
-              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                Dropdown
+              <button class="btn btn-default dropdown-toggle menu-langue-devise" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                EUR
                 <span class="caret"></span>
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
@@ -388,45 +427,46 @@
               </ul>
             </div>
           </div>
+          <div class="col-md-7">
+            <div class="col-md-4">
+              <ul>
+                <li>Société</li>
+                <li><a href="#">À propos</a></li>
+                <li><a href="#">Carrières</a></li>
+                <li><a href="#">Presse</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Aide</a></li>
+                <li><a href="#">Règles</a></li>
+                <li><a href="#">Réponse aux catastrophes</a></li>
+                <li><a href="#">Conditions générales et confidentialité</a></li>
+              </ul>
+            </div>
 
-          <div class="col-md-2">
-            <ul>
-              <li>Société</li>
-              <li><a href="#"></a>À propos</li>
-              <li><a href="#"></a>Carrières</li>
-              <li><a href="#"></a>Presse</li>
-              <li><a href="#"></a>Blog</li>
-              <li><a href="#"></a>Aide</li>
-              <li><a href="#"></a>Règles</li>
-              <li><a href="#"></a>Réponse aux catastrophes</li>
-            </ul>
+            <div class="col-md-4">
+              <ul>
+                <li>Découvrir</li>
+                <li><a href="#">Confiance et sécurité</a></li>
+                <li><a href="#">Crédit voyage</a></li>
+                <li><a href="#">La sélection Airbnb</a></li>
+                <li><a href="#">Application mobile</a></li>
+                <li><a href="#">Aide</a></li>
+                <li><a href="#">Règles</a></li>
+                <li><a href="#">Plan du site</a></li>
+              </ul>
+            </div>
+
+            <div class="col-md-4">
+              <ul>
+                <li>Hébergement</li>
+                <li><a href="#">Pourquoi être hôte</a></li>
+                <li><a href="#">Hébergement responsable</a></li>
+                <li><a href="#">Sécurité à la maison</a></li>
+                <li><a href="#">Réservation instantanée</a></li>
+              </ul>
+            </div>
+
           </div>
 
-          <div class="col-md-2">
-            <ul>
-              <li>Société</li>
-              <li><a href="#"></a>À propos</li>
-              <li><a href="#"></a>Carrières</li>
-              <li><a href="#"></a>Presse</li>
-              <li><a href="#"></a>Blog</li>
-              <li><a href="#"></a>Aide</li>
-              <li><a href="#"></a>Règles</li>
-              <li><a href="#"></a>Réponse aux catastrophes</li>
-            </ul>
-          </div>
-
-          <div class="col-md-2">
-            <ul>
-              <li>Société</li>
-              <li><a href="#"></a>À propos</li>
-              <li><a href="#"></a>Carrières</li>
-              <li><a href="#"></a>Presse</li>
-              <li><a href="#"></a>Blog</li>
-              <li><a href="#"></a>Aide</li>
-              <li><a href="#"></a>Règles</li>
-              <li><a href="#"></a>Réponse aux catastrophes</li>
-            </ul>
-          </div>
 
 
         </div>

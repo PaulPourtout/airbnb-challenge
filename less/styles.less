@@ -4,7 +4,7 @@
 @pink : #FF5A5F;
 @blue : #007A87;
 @purple : #7B0051;
-@shadow-black : rgba(0, 0, 0, 0.80);
+@shadow-black : rgba(0, 0, 0, 0.60);
 @transparentWhite : rgba(255, 255, 255, 0.3);
 
 
@@ -54,9 +54,7 @@ a {
 
 
 
-  #navModal {
-    display: none;
-  }
+
 
   form {
 
@@ -70,6 +68,86 @@ a {
 
     }
   }
+
+  #menu-top {
+
+    li {
+      padding: 13px;
+      border-left: 1px solid lighten(@grey, 60%);
+
+      &:first-of-type {
+        border-left: transparent;
+        padding: 13px 18px;
+      }
+
+      &:hover {
+        background-color: lighten(@grey, 68%);
+      }
+      a {
+        color: lighten(@grey, 10%);
+        padding: 5px 10px;
+        border: 2px solid transparent;
+        &:hover {
+          background-color: transparent;
+        }
+      }
+
+      #become {
+        border: 2px solid lighten(@grey, 50%);
+        border-radius: 2px;
+      }
+
+    }
+  }
+
+
+  .navModal {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 313px;
+    width: 263px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: lighten(@grey, 100%);
+    border-radius: 2px;
+    border: 1px solid lighten(@grey, 60%);
+
+    &:after, &:before {
+      bottom: 100%;
+      right: 55px;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+    }
+
+    &:after {
+      border-color: rgba(255, 255, 255, 0);
+      border-bottom-color: #fff;
+      border-width: 10px;
+      right: 15px;
+    }
+
+    &:before {
+      border-color: rgba(173, 173, 173, 0);
+      border-bottom-color: lighten(@grey, 60%);;
+      border-width: 11.5px;
+      right: 13.53px;
+
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  #become:hover + .navModal {
+    display: block;
+  }
+
 }
 
 
@@ -87,6 +165,9 @@ header {
   color: lighten(@grey, 100%);
 
   .header-content {
+    // display: flex;
+    // align-items: center;
+    // flex-direction: column;
     h2 {
       font-size: 5rem;
       text-transform: uppercase;
@@ -119,13 +200,40 @@ header {
 
   #navHeader {
     background-color: @shadow-black;
-
+    box-sizing: border-box;
     padding: 15px;
+    box-sizing: border-box;
     width: 100%;
+    position: absolute;
+    top: 540px;
 
-    .input-group {
-      // display: flex;
-      // align-items: center;
+    #input-group {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      input {
+        padding: 5px;
+      }
+
+      #depart {
+        display: flex;
+        justify-content: space-between;
+        background-color: lighten(@grey, 100%);
+        color: lighten(@grey, 20%);;
+
+        p {
+          margin: 0;
+          padding: 5px 50px 5px 10px;
+
+          span {
+            position: relative;
+            left: 40px;
+          }
+        }
+
+
+      }
 
       .form-control {
         width: 100%;
@@ -189,38 +297,26 @@ header {
     margin-top: 30px;
 
 
-    .rideau01 {
+    .rideau01, .rideau02, .rideau03 {
       background-color: @transparentWhite;
-      height: 400px;
+      height: 344px;
       width: 100%;
       position: absolute;
       top: 0;
       left: 0;
-      transform:skewY(90deg);
       transition: 0.4s ease-in-out;
     }
 
-    .rideau02 {
-      background-color: @transparentWhite;
-      height: 400px;
-      width: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
+    .rideau01, .rideau02 {
       transform:skewY(90deg);
-      transition: 0.4s ease-in-out;
+    }
+
+    .rideau02 {
       transition-delay: 0.1s;
     }
 
     .rideau03 {
-      background-color: @transparentWhite;
-      height: 400px;
-      width: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
       transform:skewY(-90deg);
-      transition: 0.4s ease-in-out;
       transition-delay: 0.2s;
     }
 
@@ -232,7 +328,7 @@ header {
       }
 
       .rideau02 {
-        transform:skewY(120deg);
+        transform:skewY(130deg);
       }
 
       .rideau03 {
@@ -240,7 +336,7 @@ header {
       }
 
       p {
-        color: darken(@grey, 20%);
+        color: darken(@grey, 5%);
       }
     }
 
@@ -279,6 +375,14 @@ header {
         margin: 0;
       }
     }
+
+    .lighten-image {
+
+      &:hover {
+        background-blend-mode: lighten;
+      }
+    }
+
   }
 
   .btn-container {
@@ -425,6 +529,9 @@ header {
 
     } //FIN EXPLORER
 
+
+
+
     } // FIN MAIN
 
     #carousel {
@@ -490,7 +597,7 @@ header {
           }
         }
 
-      
+
       }
 
       #card01 {
@@ -539,15 +646,60 @@ header {
       background-image: url(../img/footer-bg.png), linear-gradient(darken(@grey, 10%), darken(@grey, 10%));
       background-size: 40%;
       width: 100%;
-      padding: 30px 0;
+      padding: 50px 0;
       margin: 20px 0;
       color: lighten(@grey, 100%);
+
+      .menu-langue-devise {
+        width: 250px;
+        padding: 10px 10px;
+        box-sizing: border-box;
+        margin-bottom: 30px;
+        background-color: @grey;
+        border-radius: 2px;
+        border: none;
+        color: lighten(@grey, 100%);
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+
+        &:focus {
+          box-shadow: 0 0 10px lighten(@blue, 50%);
+          background-color: @grey;
+        }
+
+        &:hover {
+          background-color: @grey;
+          color: lighten(@grey, 100%);
+        }
+
+        .caret {
+          position: relative;
+          top: 7px;
+          color: lighten(@grey, 30%);
+        }
+      }
       a {
         color: lighten(@grey, 100%);
       }
 
+      ul {
+        padding: 0;
+        list-style: none;
+        li {
+          &:first-of-type {
+            font-weight: bold;
+            margin-bottom: 15px;
+          }
+          a {
+            font-size: 1.2rem;
 
-
+            &:hover {
+              color: lighten(@grey, 30%);
+            }
+          }
+        }
+      }
       .icon {
         border: 1px solid lighten(@grey, 40%);
         border-radius: 200px;
