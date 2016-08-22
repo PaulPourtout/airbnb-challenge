@@ -1,4 +1,10 @@
 // out: ../css/styles.css, sourcemap: true, compress: true
+@font-face {
+  font-family: 'circular';
+  src: url(../fonts/CircularStd-Book.otf);
+}
+
+
 
 @grey : #484848;
 @pink : #FF5A5F;
@@ -11,6 +17,8 @@
 body {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: 'circular', sans-serif;
 }
 
 a {
@@ -41,7 +49,6 @@ a {
 #navTop {
   background-color: lighten(@grey, 100%);
   border-bottom: 1px solid lighten(@grey, 50%);
-
   .navbar-brand {
     background-image: url(../img/logo-airbnb.png);
     height: 31px;
@@ -49,15 +56,12 @@ a {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    margin: 10px 0;
+    margin: 13px 0;
   }
 
-
-
-
-
   form {
-
+    margin: 13px 0;
+    width: 50px;
     input {
       border: none;
       background-image: url(../img/search.png);
@@ -65,12 +69,10 @@ a {
       background-position: 5px 5px;
       padding: 0 35px;
       box-shadow: none;
-
     }
   }
 
   #menu-top {
-
     li {
       padding: 13px;
       border-left: 1px solid lighten(@grey, 60%);
@@ -95,11 +97,12 @@ a {
       #become {
         border: 2px solid lighten(@grey, 50%);
         border-radius: 2px;
+
+
       }
 
     }
   }
-
 
   .navModal {
     display: none;
@@ -136,16 +139,11 @@ a {
       border-bottom-color: lighten(@grey, 60%);;
       border-width: 11.5px;
       right: 13.53px;
-
     }
 
     p {
       margin: 0;
     }
-  }
-
-  #become:hover + .navModal {
-    display: block;
   }
 
 }
@@ -157,20 +155,23 @@ header {
   background-size: cover;
   height: 600px;
   width: 100%;
+  padding: 0 !important;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-
+  box-sizing: border-box;
   color: lighten(@grey, 100%);
 
   .header-content {
-    // display: flex;
-    // align-items: center;
-    // flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 600px;
     h2 {
       font-size: 5rem;
       text-transform: uppercase;
+      margin: 0;
     }
 
     h2, p {
@@ -179,12 +180,12 @@ header {
 
     p {
       font-size: 1.6rem;
-      margin: 50px 0;
+      margin: 20px 0;
     }
 
     .bouton {
       padding: 10px 50px;
-      margin: 50px 0;
+      margin: 0;
       border-radius: 2px;
       border: none;
       transition: 0.2s;
@@ -201,11 +202,9 @@ header {
   #navHeader {
     background-color: @shadow-black;
     box-sizing: border-box;
-    padding: 15px;
+    padding: 30px 0;
     box-sizing: border-box;
     width: 100%;
-    position: absolute;
-    top: 540px;
 
     #input-group {
       display: flex;
@@ -213,7 +212,13 @@ header {
       justify-content: center;
 
       input {
-        padding: 5px;
+        padding: 10px;
+        border: 1px solid lighten(@grey, 60%);
+        border-radius: 2px 0 0 2px;
+        color: @grey;
+        &:focus {
+          box-shadow: 0 2px 0 lighten(@grey, 60%);
+        }
       }
 
       #depart {
@@ -224,7 +229,8 @@ header {
 
         p {
           margin: 0;
-          padding: 5px 50px 5px 10px;
+          padding: 10px 50px 10px 10px;
+          border: 1px solid lighten(@grey, 60%);
 
           span {
             position: relative;
@@ -237,6 +243,9 @@ header {
 
       .form-control {
         width: 100%;
+        border-radius: 0;
+        color: @grey;
+        height: 42px;
       }
 
       .dropdown-menu li a {
@@ -246,18 +255,23 @@ header {
         }
       }
 
-
       .bouton {
         color: lighten(@grey, 100%);
         background-color: @pink;
         border: none;
+        border-top: 1.5px solid @pink;
+        margin: 0;
         padding: 10px;
         border-radius: 0 2px 2px 0;
         font-weight: bold;
-        box-shadow: 0 2px 0 darken(@pink, 20%);
+        box-shadow: 0 1.5px 0 darken(@pink, 20%);
         transition: 0.2s ease;
         &:hover {
           background-color: lighten(@pink, 10%);
+        }
+        img {
+          height: 17px;
+          width: 17px;
         }
       }
     }
@@ -274,7 +288,7 @@ header {
   background-color: lighten(@grey, 55%);
 
   .title {
-
+    margin: 50px 0 !important;
     color: darken(@grey, 4%);;
     h3 {
       font-weight: bold;
@@ -285,6 +299,7 @@ header {
     p {
       font-size: 1.6rem;
     }
+
   }
 
 
@@ -421,16 +436,23 @@ header {
       background-color: lighten(@grey, 100%);
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: space-around;
       box-sizing: border-box;
       padding: 35px;
+
+      h4 {
+        margin-top: 0;
+        font-size: 2.4rem;
+        font-weight: bold;
+      }
 
       .bouton {
         color: lighten(@grey, 100%);
         background-color: @blue;
         border: none;
+        margin: 0 !important;
         padding: 10px;
-        border-radius: 0 2px 2px 0;
+        border-radius: 2px;
         font-weight: bold;
         box-shadow: 0 2px 0 darken(@blue, 20%);
         transition: 0.2s ease;
@@ -500,6 +522,7 @@ header {
     #venise {
       background-image: url(../img/escapadeRomantiqueAVenise.jpg);
       background-position: center;
+      background-size: 150%;
     }
 
     #rome {
@@ -524,7 +547,8 @@ header {
 
     #biarritz {
       background-image: url(../img/surfABiarritz.jpg);
-      background-position: center;
+      background-position: top;
+      background-size: 150%;
     }
 
     } //FIN EXPLORER
@@ -534,30 +558,62 @@ header {
 
     } // FIN MAIN
 
-    #carousel {
-      color: lighten(@grey, 100%);
-      background-image: url(../img/carrousel-bg01.jpg);
-      background-repeat: no-repeat;
-      width: 100%;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      h2 {
-        font-size: 7rem;
-        font-weight: bold;
-      }
-      p {
-        font-size: 2rem;
-        font-weight: 400;
+    // CAROUSEL
+
+    .carousel {
+      .item {
+        .item-content {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          height: 600px;
+          width: 100%;
+          color: lighten(@grey, 100%);
+          text-align: center;
+          h2 {
+            font-size: 7rem;
+            font-weight: bold;
+          }
+
+          p {
+            font-size: 2.5rem;
+            width: 85%;
+          }
+
+          .fa-play-circle {
+            font-size: 10rem;
+            background: none;
+            color: @transparentWhite;
+            transition: 0.2s ease;
+            &:hover {
+              color: lighten(@grey, 100%);
+            }
+          }
+        }
+
+        #item01 {
+          background-image: url(../img/carousel-bg01.jpg);
+        }
+
+        #item02 {
+          background-image: url(../img/carousel-bg02.jpg);
+        }
+
+        #item03 {
+          background-image: url(../img/carousel-bg03.jpg);
+        }
+
       }
 
-      .fa-play-circle {
-        color: rgba(255, 255, 255, 0.8);
-        font-size: 9rem;
+      .carousel-control {
+        background-image: none;
       }
     }
+
+
+
+
 
     #communaute {
       a {
@@ -650,33 +706,63 @@ header {
       margin: 20px 0;
       color: lighten(@grey, 100%);
 
-      .menu-langue-devise {
-        width: 250px;
-        padding: 10px 10px;
-        box-sizing: border-box;
-        margin-bottom: 30px;
-        background-color: @grey;
-        border-radius: 2px;
-        border: none;
-        color: lighten(@grey, 100%);
-        display: flex;
-        justify-content: space-between;
-        align-content: center;
 
-        &:focus {
-          box-shadow: 0 0 10px lighten(@blue, 50%);
+      .dropdown {
+        .menu-langue-devise {
+          width: 250px;
+          padding: 10px 10px;
+          box-sizing: border-box;
+          margin-bottom: 30px;
           background-color: @grey;
-        }
-
-        &:hover {
-          background-color: @grey;
+          border-radius: 2px;
+          border: none;
           color: lighten(@grey, 100%);
+          // display: flex;
+          // justify-content: space-between;
+          // align-content: center;
+
+          &:focus {
+            box-shadow: 0 0 10px lighten(@blue, 50%);
+            background-color: @grey !important;
+          }
+
+          &:hover {
+            background-color: @grey;
+            color: lighten(@grey, 100%);
+          }
+
+          .drop-space {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .caret {
+              color: lighten(@grey, 30%);
+            }
+
+            p {
+              color: lighten(@grey, 100%);
+              margin: 0;
+            }
+          }
         }
 
-        .caret {
-          position: relative;
-          top: 7px;
-          color: lighten(@grey, 30%);
+        ul {
+          background-color: @grey !important;
+          margin-top: -30px;
+          li {
+            &:first-of-type {
+              margin: 0;
+            }
+          }
+          a {
+            color: lighten(@grey, 100%);
+
+            &:hover {
+              background-color: @pink;
+              color: lighten(@grey, 100%);
+            }
+          }
         }
       }
       a {
@@ -686,6 +772,7 @@ header {
       ul {
         padding: 0;
         list-style: none;
+        margin-bottom: 30px;
         li {
           &:first-of-type {
             font-weight: bold;
@@ -700,8 +787,82 @@ header {
           }
         }
       }
-      .icon {
-        border: 1px solid lighten(@grey, 40%);
-        border-radius: 200px;
+
+      .divider {
+        border-bottom: 1px solid lighten(@grey, 10%);
+        margin: 20px 0;
       }
+
+      #icons-container {
+        margin: 25px 0;
+
+        .icon {
+          border: 1px solid lighten(@grey, 10%);
+          border-radius: 200px;
+          margin: 0 5px;
+          height: 40px;
+          width: 40px;
+          padding: 5px;
+
+          i {
+            position: relative;
+            top: 4px;
+            left: 0px;
+            font-size: 1.5rem;
+          }
+        }
+
+
+      }
+      p {
+        color: lighten(@grey, 10%);
+        font-size: 1.5rem;
+      }
+
+      #xs-list {
+        font-weight: bold;
+        li a {
+          font-size: 1.1rem;
+        }
+        li:first-of-type {
+          margin: 0 !important;
+        }
+      }
+    }
+
+
+    @media screen and (max-width: 640px) {
+      .rm-padding-xs {
+        padding: 0 !important;
+      }
+
+
+      #estimer {
+        #estimerText {
+          background-image: url(../img/host-banner.jpg);
+          background-size: cover !important;
+          text-align: center;
+          color: lighten(@grey, 100%);
+          background-position: center;
+        }
+      }
+
+      .rideau01, .rideau02, .rideau03 {
+        height: 387px !important;
+      }
+
+      .illustration-container {
+        margin-top: 0;
+
+        .illustration {
+          height: 387px !important;
+        }
+
+      }
+
+      footer {
+        margin-top: 43px;
+      }
+
+
     }
