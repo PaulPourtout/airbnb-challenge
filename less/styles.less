@@ -80,6 +80,7 @@ a {
       &:first-of-type {
         border-left: transparent;
         padding: 13px 18px;
+        background-color: lighten(@grey, 100%) !important;
       }
 
       &:hover {
@@ -98,7 +99,9 @@ a {
         border: 2px solid lighten(@grey, 50%);
         border-radius: 2px;
 
-
+        &:hover {
+          background-color: lighten(@grey, 68%);
+        }
       }
 
     }
@@ -152,6 +155,7 @@ a {
 header {
   background-image: url(../img/header-bg.jpg);
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
   height: 600px;
   width: 100%;
@@ -268,6 +272,11 @@ header {
         transition: 0.2s ease;
         &:hover {
           background-color: lighten(@pink, 10%);
+          border-top: 1px solid lighten(@pink, 10%);
+        }
+
+        p {
+          margin: 0;
         }
         img {
           height: 17px;
@@ -572,7 +581,7 @@ header {
           color: lighten(@grey, 100%);
           text-align: center;
           h2 {
-            font-size: 7rem;
+            font-size: 6rem;
             font-weight: bold;
           }
 
@@ -611,7 +620,33 @@ header {
       }
     }
 
+    .carousel-fade {
+      .carousel-inner {
+        .item {
+          transition-property: opacity;
+        }
 
+        .item,
+        .active.left,
+        .active.right {
+          opacity: 0;
+        }
+
+        .active,
+        .next.left,
+        .prev.right {
+          opacity: 1;
+        }
+
+        .next,
+        .prev,
+        .active.left,
+        .active.right {
+          left: 0;
+          transform: translate3d(0, 0, 0);
+        }
+      }
+    }
 
 
 
@@ -658,6 +693,10 @@ header {
 
       #card01 {
         background-color: lighten(@blue, 10%);
+
+        img {
+          margin: 40px 20px;
+        }
 
         figure {
           background-image: url(../img/create-airbnb.png);
@@ -831,7 +870,7 @@ header {
     }
 
 
-    @media screen and (max-width: 640px) {
+    @media screen and (max-width: 768px) {
       .rm-padding-xs {
         padding: 0 !important;
       }
