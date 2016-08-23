@@ -5,7 +5,10 @@
   <title>Challenge Airbnb</title>
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
 
@@ -24,7 +27,7 @@
 
 
   <!-- NAV TOP -->
-  <nav id="navTop" class="navbar navbar-fixed-top">
+  <nav id="navTop" class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
@@ -34,8 +37,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">
-          <!-- <img src="img/logo-airbnb.png" alt="" /> -->
+        <a class="navbar-brand" href="index.html">
         </a>
       </div>
 
@@ -47,7 +49,7 @@
           </div>
         </form>
         <ul id="menu-top" class="nav navbar-nav navbar-right">
-          <li><a id="become" href="#">Devenez hôte</a>
+          <li><a id="become" href="business_travel.html">Devenez hôte</a>
             <!-- MODAL HOVER FIRST LINK -->
             <div class="navModal">
               <p>Si vous partagiez votre logement à Versailles, vous pourriez gagner 232€ en une semaine. <br>
@@ -64,6 +66,15 @@
 
     <!-- HEADER -->
     <header class="container-fluid">
+
+      <video class="hidden-xs" poster="img/bg-header-pict-vid.jpg" id="bgvid" playsinline autoplay>
+        <source src="img/header-bg-vid.webm" type="video/webm" />
+        <source src="img/header-bg-vid.mp4" type="video/mp4"/>
+      </video>
+
+
+
+
       <div class="header-content col-md-12 text-center">
         <h2>Vivez là-bas</h2>
         <p>Réservez des logements auprès d'hôtes locaux dans plus de 191 pays et vivez là-bas, comme chez vous.</p>
@@ -82,7 +93,7 @@
               Arrivé
             </p>
           </div>
-          <div class="btn-group">
+          <div class="btn-group dropup">
             <button type="button" class="btn btn-default dropdown-toggle form-control hidden-xs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               1 voyageur <span class="caret"></span>
             </button>
@@ -110,11 +121,11 @@
 
         <!-- ESTIMER REVENUS -->
         <div id="estimer" class="container-fluid rm-padding-xs">
-          <div class="col-sm-12 rm-padding-xs">
+          <div class="col-md-12 rm-padding-xs">
             <a href="#" id="estimerIllustration" class="illustration-container illustration col-sm-8 hidden-xs">
             </a>
 
-            <div id="estimerText" class="col-sm-4 illustration-container">
+            <div id="estimerText" class="col-md-4">
               <h4>Ouvrez la porte à un voyageur et à une nouvelle vie</h4>
               <p>Gagnez de l'argent en accueillant des voyageurs.</p>
               <a class="bouton text-center" href="#">Estimer mes revenus</a>
@@ -131,19 +142,13 @@
             <p class="text-center">Découvrez de nouveaux logements incroyables près de chez vous.</p>
           </div>
 
-          <div class="col-md-4 col-xs-12 illustration-container rm-padding-xs">
+          <div class="col-lg-4 col-xs-12 illustration-container rm-padding-xs">
             <a href="#" id="lille" class="illustration col-xs-12">
               <p>Lille</p>
-              <div class="rideau01">
-              </div>
-              <div class="rideau02">
-              </div>
-              <div class="rideau03">
-              </div>
             </a>
           </div>
 
-          <div class="col-md-4 col-sm-6 col-xs-12 illustration-container rm-padding-xs">
+          <div class="col-lg-4 col-sm-6 col-xs-12 illustration-container rm-padding-xs">
             <a href="#" id="bruxelles" class="illustration col-xs-12">
               <p>Bruxelles</p>
               <div class="rideau01">
@@ -155,32 +160,26 @@
             </a>
           </div>
 
-          <div class="col-md-4 col-sm-6 col-xs-12 illustration-container rm-padding-xs">
+          <div class="col-lg-4 col-sm-6 col-xs-12 illustration-container rm-padding-xs">
             <a href="#" id="londres" class="illustration col-xs-12">
               <p>Londres</p>
-              <div class="rideau01">
-              </div>
-              <div class="rideau02">
-              </div>
-              <div class="rideau03">
-              </div>
             </a>
           </div>
 
-          <div class="btn-container col-md-12 rm-padding-xs hidden-xs">
+          <div class="btn-container col-lg-12 rm-padding-xs hidden-xs">
             <a href="#" class="bouton">Voir toutes les destinations</a>
           </div>
         </div> <!-- /WEEKEND -->
 
         <!-- EXPLORER -->
-        <div id="explorer" class="col-md-12">
+        <div id="explorer" class="col-lg-12">
           <div class="title">
             <h3 class="text-center">Explorez le monde</h3>
             <p class="text-center">Découvrez les destinations les plus prisées à travers le monde.</p>
           </div>
 
           <div class="row">
-            <div class="col-md-8 illustration-container rm-padding-xs">
+            <div class="col-lg-8 col-sm-12 illustration-container rm-padding-xs">
               <a href="#" id="lisbonne" class="illustration col-md-12">
                 <p>Lisbonne</p>
                 <div class="rideau01">
@@ -192,41 +191,47 @@
               </a>
             </div>
 
-            <div class="col-md-4 col-sm-6 col-xs-12 illustration-container rm-padding-xs">
+            <div class="col-lg-4 col-sm-6 col-xs-12 illustration-container rm-padding-xs">
               <a href="#" id="parigot" class="illustration col-md-12">
                 <figure id="id-parigot" class="hote-picture"></figure>
                 <h4 class="text-center">Chez la famille Parigot</h4>
                 <h5>En Auvergne</h5>
+                <div class="price">
+                  85$
+                </div>
               </a>
             </div>
 
-            <div class="col-md-4 col-sm-6 col-xs-12 illustration-container rm-padding-xs">
+            <div class="col-lg-4 col-sm-6 col-xs-12 illustration-container rm-padding-xs">
               <a href="#" id="amsterdam" class="illustration col-md-12">
                 <p>Amsterdam</p>
               </a>
             </div>
 
-            <div class="col-md-4 col-sm-6 col-xs-12 illustration-container rm-padding-xs hidden-xs">
-              <a href="#" id="newYork" class="illustration lighten-image col-md-12">
+            <div class="col-lg-4 col-sm-6 col-xs-12 illustration-container rm-padding-xs hidden-xs">
+              <a href="#" id="newYork" class="illustration col-md-12">
                 <p>New York</p>
               </a>
             </div>
 
-            <div class="col-md-4 col-sm-6 col-xs-12 illustration-container rm-padding-xs hidden-xs hidden-xs">
+            <div class="col-lg-4 col-sm-6 col-xs-12 illustration-container rm-padding-xs hidden-xs hidden-xs">
               <a href="#" id="venise" class="illustration col-md-12">
                 <p>Escapade romantique à Venise</p>
               </a>
             </div>
 
-            <div class="col-md-4 col-sm-6 col-xs-12 illustration-container rm-padding-xs hidden-xs">
+            <div class="col-lg-4 col-sm-6 col-xs-12 illustration-container rm-padding-xs hidden-xs">
               <a href="#" id="stockholm" class="illustration col-md-12">
                 <figure id="id-moa" class="hote-picture"></figure>
                 <h4>Chez Moa</h4>
                 <h5>Stockholm</h5>
+                <div class="price">
+                  150$
+                </div>
               </a>
             </div>
 
-            <div class="col-md-8 col-sm-6 illustration-container rm-padding-xs hidden-xs">
+            <div class="col-lg-8 col-sm-6 illustration-container rm-padding-xs hidden-xs">
               <a href="#" id="rome" class="illustration col-md-12">
                 <p>Rome</p>
                 <div class="rideau01">
@@ -238,19 +243,19 @@
               </a>
             </div>
 
-            <div class="col-md-4 col-sm-6 col-xs-12 illustration-container rm-padding-xs">
+            <div class="col-lg-4 col-sm-6 col-xs-12 illustration-container rm-padding-xs">
               <a href="#" id="berlin" class="illustration col-md-12">
                 <p>Berlin</p>
               </a>
             </div>
 
-            <div class="col-md-4 col-sm-6 col-xs-12 illustration-container rm-padding-xs hidden-xs">
+            <div class="col-lg-4 col-sm-6 col-xs-12 illustration-container rm-padding-xs hidden-xs">
               <a href="#" id="bordeaux" class="illustration col-md-12">
                 <p>Bordeaux</p>
               </a>
             </div>
 
-            <div class="col-md-4 col-sm-12 col-xs-12 illustration-container rm-padding-xs hidden-xs">
+            <div class="col-lg-4 col-md-12 col-xs-12 illustration-container rm-padding-xs hidden-xs">
               <a href="#" id="biarritz" class="illustration col-md-12">
                 <p>Surf à Biarritz</p>
               </a>
@@ -268,50 +273,55 @@
     <section id="part02" class="hidden-xs">
 
       <!-- carousel -->
-      <div id="carousel-example-generic" class="carousel slide carousel-fade" data-ride="carousel">
+      <div id="carousel-example-generic" class="carousel slide carousel-fade" data-ride="carousel" data-interval="false">
         <!-- Indicators -->
 
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
           <div class="item active">
-            <div class="col-xs-12 item-content" id="item01">
-              <h2>Chez vous, ailleurs</h2>
-              <p>
-                Découvrez l’accueil chaleureux que les hôtes Airbnb vous réservent à travers le monde.
-              </p>
-              <a href="#">
-                <span>
-                  <i class="fa fa-play-circle"></i>
-                </span>
-              </a>
+            <div class="col-xs-12" id="item01">
+              <div class="item-content">
+                <h2>Chez vous, ailleurs</h2>
+                <p>
+                  Découvrez l’accueil chaleureux que les hôtes Airbnb vous réservent à travers le monde.
+                </p>
+                <a href="#">
+                  <span>
+                    <i class="fa fa-play-circle"></i>
+                  </span>
+                </a>
+              </div>
             </div>
+          </div>
+          <div class="item">
+            <div class="col-xs-12" id="item02">
+              <div class="item-content">
+                <h2>NOUS VOUS PRÉSENTONS LE BÉLO</h2>
+                <p>
+                  Chez vous, ailleurs : l’histoire d’un symbole.
+                </p>
+                <a href="#">
+                  <span>
+                    <i class="fa fa-play-circle"></i>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="col-xs-12" id="item03">
+              <div class="item-content">
+                <h2>CHEZ VOUS, OÙ QUE VOUS ALLIEZ</h2>
+                <p>
+                  Grâce à Airbnb, vous vous sentirez chez vous en vacances. De villas de luxe aux appartements conviviaux parfaits pour les séjours en vacances, vous trouverez le logement de vos rêves.
+                </p>
 
-          </div>
-          <div class="item">
-            <div class="col-xs-12 item-content" id="item02">
-              <h2>NOUS VOUS PRÉSENTONS LE BÉLO</h2>
-              <p>
-                Chez vous, ailleurs : l’histoire d’un symbole.
-              </p>
-              <a href="#">
-                <span>
-                  <i class="fa fa-play-circle"></i>
-                </span>
-              </a>
-            </div>
-          </div>
-          <div class="item">
-            <div class="col-xs-12 item-content" id="item03">
-              <h2>CHEZ VOUS, OÙ QUE VOUS ALLIEZ</h2>
-              <p>
-                Grâce à Airbnb, vous vous sentirez chez vous en vacances. De villas de luxe aux appartements conviviaux parfaits pour les séjours en vacances, vous trouverez le logement de vos rêves.
-              </p>
-              <a href="#">
-                <span>
-                  <i class="fa fa-play-circle"></i>
-                </span>
-              </a>
+                <a href="#" class="bouton">
+                  Commencer à explorer
+                </a>
+              </div>
+
             </div>
           </div>
         </div>
@@ -339,59 +349,77 @@
           <div class="row text-center">
             <a href="#" class="card-container col-md-3 col-sm-6 col-xs-12">
               <div id="card01" class="card col-xs-12">
-                <img src="img/create-airbnb-text.png" alt="" />
-                <figure></figure>
-                <div class="card-text">
-                  <h3 class="col-xs-12">Appropriez-vous Airbnb</h3>
-                  <p class="col-xs-12">Créez votre symbole, racontez votre histoire</p>
+                <div class="darken-card">
                 </div>
+                <div class="card-content">
+                  <img src="img/create-airbnb-text.png" alt="" />
+                  <figure></figure>
+                  <div class="card-text">
+                    <h3 class="col-xs-12">Appropriez-vous Airbnb</h3>
+                    <p class="col-xs-12">Créez votre symbole, racontez votre histoire</p>
+                  </div>
+                </div>
+
 
               </div>
             </a>
 
             <a href="#" class="card-container col-md-3 col-sm-6 col-xs-12">
               <div id="card02" class="card col-xs-12">
-                <div class="etiquette">
-                  Voyage
+                <div class="darken-card">
                 </div>
-                <div class="card-text">
-                  <div>
-                    <h3 class="col-xs-12">Garry et Lianne</h3>
-                    <p class="col-xs-12">À l'autre bout du monde ou dans leur région, Garry et Lianne sont constamment à la recherche d'expériences locales.</p>
+                <div class="card-content">
+                  <div class="etiquette">
+                    Voyage
                   </div>
+                  <div class="card-text">
+                    <div>
+                      <h3 class="col-xs-12">Garry et Lianne</h3>
+                      <p class="col-xs-12">À l'autre bout du monde ou dans leur région, Garry et Lianne sont constamment à la recherche d'expériences locales.</p>
+                    </div>
 
-                  <p>En savoir plus sur le voyage avec Airbnb.</p>
+                    <p class="card-link">En savoir plus sur le voyage avec Airbnb.</p>
+                  </div>
                 </div>
+
               </div>
             </a>
 
             <a href="#" class="card-container col-md-3 col-sm-6 col-xs-12">
               <div id="card03" class="card col-xs-12">
-                <div class="etiquette">
-                  Voyage d'affaire
+                <div class="darken-card">
                 </div>
-                <div class="card-text">
-                  <div>
-                    <h3 class="col-xs-12">Airbnb pour les entreprises</h3>
-                    <p class="col-xs-12">Comme chez vous, même en voyage d'affaires !</p>
+                <div class="card-content">
+                  <div class="etiquette">
+                    Voyage d'affaire
                   </div>
+                  <div class="card-text">
+                    <div>
+                      <h3 class="col-xs-12">Airbnb pour les entreprises</h3>
+                      <p class="col-xs-12">Comme chez vous, même en voyage d'affaires !</p>
+                    </div>
 
-                  <p>Enregistrez votre équipe sur Airbnb.</p>
+                    <p class="card-link">Enregistrez votre équipe sur Airbnb.</p>
+                  </div>
                 </div>
               </div>
             </a>
 
             <a href="#" class="card-container col-md-3 col-sm-6 col-xs-12">
               <div id="card04" class="card col-xs-12">
-                <div class="etiquette">
-                  Hébergement
+                <div class="darken-card">
                 </div>
-                <div class="card-text">
-                  <div>
-                    <h3 class="col-xs-12">Patricia</h3>
-                    <p class="col-xs-12">Photographe professionnelle, Patricia aime faire découvrir la scène artistique de Shanghai à ses voyageurs.</p>
+                <div class="card-content">
+                  <div class="etiquette">
+                    Hébergement
                   </div>
-                  <p>Apprenez-en plus sur l'hébergement avec Airbnb.</p>
+                  <div class="card-text">
+                    <div>
+                      <h3 class="col-xs-12">Patricia</h3>
+                      <p class="col-xs-12">Photographe professionnelle, Patricia aime faire découvrir la scène artistique de Shanghai à ses voyageurs.</p>
+                    </div>
+                    <p class="card-link">Apprenez-en plus sur l'hébergement avec Airbnb.</p>
+                  </div>
                 </div>
               </div>
             </a>
@@ -401,9 +429,10 @@
       </div> <!-- /CONTAINER FLUID -->
     </section> <!-- /PART02 -->
 
+    <!-- FOOTER -->
     <footer class="container-fluid">
       <div class="container">
-        <div class="col-md-10 col-md-offset-1">
+        <div class="col-md-10 col-md-offset-1 col-xs-offset-0">
 
           <div class="col-sm-5">
             <div class="dropdown">

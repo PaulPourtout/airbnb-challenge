@@ -4,15 +4,14 @@
   src: url(../fonts/CircularStd-Book.otf);
 }
 
-
-
 @grey : #484848;
 @pink : #FF5A5F;
 @blue : #007A87;
 @purple : #7B0051;
 @shadow-black : rgba(0, 0, 0, 0.60);
 @transparentWhite : rgba(255, 255, 255, 0.3);
-
+@transparentGrey: rgba(40, 40, 40, 0.9);
+@backgroundColor : #EDEFED;
 
 body {
   margin: 0;
@@ -45,7 +44,6 @@ a {
   }
 }
 
-
 #navTop {
   background-color: lighten(@grey, 100%);
   border-bottom: 1px solid lighten(@grey, 50%);
@@ -57,6 +55,12 @@ a {
     background-size: contain;
     background-position: center;
     margin: 13px 0;
+  }
+
+  button {
+    .icon-bar {
+      background-color: @pink;
+    }
   }
 
   form {
@@ -103,7 +107,6 @@ a {
           background-color: lighten(@grey, 68%);
         }
       }
-
     }
   }
 
@@ -148,23 +151,30 @@ a {
       margin: 0;
     }
   }
-
 }
-
 
 header {
   background-image: url(../img/header-bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 600px;
+  height: 500px;
+  overflow: hidden;
   width: 100%;
   padding: 0 !important;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
   color: lighten(@grey, 100%);
+
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
 
   .header-content {
     display: flex;
@@ -173,7 +183,7 @@ header {
     flex-direction: column;
     height: 600px;
     h2 {
-      font-size: 5rem;
+      font-size: 6rem;
       text-transform: uppercase;
       margin: 0;
     }
@@ -199,9 +209,7 @@ header {
         border-color: none;
       }
     }
-
   }
-
 
   #navHeader {
     background-color: @shadow-black;
@@ -234,15 +242,14 @@ header {
         p {
           margin: 0;
           padding: 10px 50px 10px 10px;
-          border: 1px solid lighten(@grey, 60%);
+          border-top: 1px solid lighten(@grey, 60%);
+          border-bottom: 1px solid lighten(@grey, 60%);
 
           span {
             position: relative;
             left: 40px;
           }
         }
-
-
       }
 
       .form-control {
@@ -263,7 +270,7 @@ header {
         color: lighten(@grey, 100%);
         background-color: @pink;
         border: none;
-        border-top: 1.5px solid @pink;
+        border-top: 2px solid @pink;
         margin: 0;
         padding: 10px;
         border-radius: 0 2px 2px 0;
@@ -287,39 +294,40 @@ header {
   }
 }
 
-
-
-
-
 // MAIN
 
-#main {
-  background-color: lighten(@grey, 55%);
-
-  .title {
-    margin: 50px 0 !important;
-    color: darken(@grey, 4%);;
-    h3 {
-      font-weight: bold;
-      font-size: 3rem;
-      margin-top: 0;
-    }
-
-    p {
-      font-size: 1.6rem;
-    }
-
+.title {
+  margin: 50px 0 !important;
+  color: darken(@grey, 4%);;
+  h3 {
+    font-weight: bold;
+    font-size: 3rem;
+    margin-top: 0;
   }
+  p {
+    font-size: 1.6rem;
+  }
+}
 
+.price {
+  position: absolute;
+  bottom: 35px;
+  left: 0;
+  padding: 5px 15px;
+  width: 20%;
+  font-size: 2rem;
+  background-color: @transparentGrey;
+  box-shadow: 0 2px 0 lighten(@grey, 10%);
+  transition: 0.4s ease;
+  transition-delay: 0.2s;
+}
 
-
-
-
+#main {
+  background-color: @backgroundColor;
 
   .illustration-container {
     height: 344px;
     margin-top: 30px;
-
 
     .rideau01, .rideau02, .rideau03 {
       background-color: @transparentWhite;
@@ -334,52 +342,48 @@ header {
     .rideau01, .rideau02 {
       transform:skewY(90deg);
     }
-
     .rideau02 {
       transition-delay: 0.1s;
     }
-
     .rideau03 {
       transform:skewY(-90deg);
       transition-delay: 0.2s;
     }
 
-
     :hover {
       .rideau01 {
         transform:skewY(180deg);
-
       }
-
       .rideau02 {
         transform:skewY(130deg);
       }
-
       .rideau03 {
         transform:skewY(-130deg);
       }
-
-      p {
+      p, h4, h5 {
         color: darken(@grey, 5%);
       }
-    }
 
+      .price {
+        width: 100%;
+      }
+    }
 
 
     .illustration {
       background-repeat: no-repeat;
       background-size: cover;
-
       overflow: hidden;
-
       height: 344px;
       width: 100%;
       display: flex;
+      position: relative;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       color: lighten(@grey, 100%);
       text-align: center;
+      transition: 0.3s ease;
       p {
         z-index: 5;
         font-size: 3rem;
@@ -398,15 +402,12 @@ header {
         font-size: 1.5rem;
         margin: 0;
       }
-    }
-
-    .lighten-image {
-
+      transition: 0.3s ease;
       &:hover {
         background-blend-mode: lighten;
+        background-color: @transparentWhite;
       }
     }
-
   }
 
   .btn-container {
@@ -431,15 +432,14 @@ header {
     }
   }
 
-
   // ESTIMER
-
   #estimer {
     height: 344px;
-    margin: 20px 0 50px 0;
+    margin: 50px 0 50px 0;
     #estimerIllustration {
       background-image: url(../img/host-banner.jpg);
       background-size: cover !important;
+      margin-top: 0 !important;
     }
     #estimerText {
       background-color: lighten(@grey, 100%);
@@ -448,7 +448,7 @@ header {
       justify-content: space-around;
       box-sizing: border-box;
       padding: 35px;
-
+      height: 344px;
       h4 {
         margin-top: 0;
         font-size: 2.4rem;
@@ -471,10 +471,6 @@ header {
       }
     }
   }
-
-
-
-
 
   #weekend {
 
@@ -504,12 +500,8 @@ header {
       border: 3px solid lighten(@grey, 100%);
     }
 
-
-
-
     #lisbonne {
       background-image: url(../img/lisbonne.jpg);
-
     }
 
     #parigot {
@@ -531,7 +523,7 @@ header {
     #venise {
       background-image: url(../img/escapadeRomantiqueAVenise.jpg);
       background-position: center;
-      background-size: 150%;
+      background-size: 160%;
     }
 
     #rome {
@@ -540,7 +532,6 @@ header {
 
     #stockholm {
       background-image: url(../img/chez-moa.jpg);
-
       #id-moa {
         background-image: url(../img/id-moa.jpg);
       }
@@ -557,18 +548,13 @@ header {
     #biarritz {
       background-image: url(../img/surfABiarritz.jpg);
       background-position: top;
-      background-size: 150%;
+      background-size: 160%;
     }
 
     } //FIN EXPLORER
-
-
-
-
     } // FIN MAIN
 
     // CAROUSEL
-
     .carousel {
       .item {
         .item-content {
@@ -580,9 +566,11 @@ header {
           width: 100%;
           color: lighten(@grey, 100%);
           text-align: center;
+          padding: 0 150px;
           h2 {
             font-size: 6rem;
             font-weight: bold;
+            text-transform: uppercase;
           }
 
           p {
@@ -604,15 +592,22 @@ header {
         #item01 {
           background-image: url(../img/carousel-bg01.jpg);
         }
-
         #item02 {
           background-image: url(../img/carousel-bg02.jpg);
         }
-
         #item03 {
           background-image: url(../img/carousel-bg03.jpg);
-        }
 
+          .bouton {
+            background-color: lighten(@blue, 50%);
+            color: lighten(@grey, 100%);
+            border: none;
+            margin-bottom: 0;
+            &:hover {
+              background-color: lighten(@blue, 10%);
+            }
+          }
+        }
       }
 
       .carousel-control {
@@ -655,23 +650,56 @@ header {
         color: lighten(@grey, 100%);
       }
       .card {
-
         height: 492px;
         width: 100%;
         background-size: cover;
         background-repeat: no-repeat;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
+        overflow: hidden;
+        position: relative;
         margin-bottom: 30px;
-        transition: 0.3s;
+
         &:hover {
-          filter: brightness(80%);
+          .darken-card {
+            opacity: 0.6;
+          }
+          .etiquette {
+            transform: translateY(0);
+          }
+          .card-link {
+            text-decoration: underline;
+          }
+        }
+        .darken-card {
+          opacity: 0;
+          height: 492px;
+          width: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-color: @shadow-black;
+          z-index: 0;
+          transition: 0.3s;
+        }
+
+        .card-content {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          height: 492px;
+          position: absolute;
+          top: 0;
+          left: 0;
         }
         .etiquette {
           padding: 10px;
           font-weight: bold;
+          transform: translateY(-40px);
+          transition: 0.3s;
+        }
+        .etiquette, .card-text, img, figure {
+          z-index: 3;
         }
 
         .card-text {
@@ -687,13 +715,10 @@ header {
             font-size: 3rem;
           }
         }
-
-
       }
 
       #card01 {
         background-color: lighten(@blue, 10%);
-
         img {
           margin: 40px 20px;
         }
@@ -703,10 +728,9 @@ header {
           background-position: center;
           background-size: contain;
           height: 270px;
-          width: 234px;
+          width: 100%;
           background-repeat: no-repeat;
         }
-
         .card-text {
           height: 155px;
         }
@@ -714,7 +738,6 @@ header {
 
       #card02 {
         background-image: url(../img/garry.jpg);
-
         .etiquette {
           background-color: @blue;
         }
@@ -722,7 +745,6 @@ header {
 
       #card03 {
         background-image: url(../img/entreprise.jpg);
-
         .etiquette {
           background-color: @grey;
         }
@@ -730,7 +752,6 @@ header {
 
       #card04 {
         background-image: url(../img/patricia.jpg);
-
         .etiquette {
           background-color: @purple;
         }
@@ -745,10 +766,9 @@ header {
       margin: 20px 0;
       color: lighten(@grey, 100%);
 
-
       .dropdown {
         .menu-langue-devise {
-          width: 250px;
+          width: 80%;
           padding: 10px 10px;
           box-sizing: border-box;
           margin-bottom: 30px;
@@ -756,10 +776,6 @@ header {
           border-radius: 2px;
           border: none;
           color: lighten(@grey, 100%);
-          // display: flex;
-          // justify-content: space-between;
-          // align-content: center;
-
           &:focus {
             box-shadow: 0 0 10px lighten(@blue, 50%);
             background-color: @grey !important;
@@ -819,14 +835,12 @@ header {
           }
           a {
             font-size: 1.2rem;
-
             &:hover {
               color: lighten(@grey, 30%);
             }
           }
         }
       }
-
       .divider {
         border-bottom: 1px solid lighten(@grey, 10%);
         margin: 20px 0;
@@ -834,15 +848,13 @@ header {
 
       #icons-container {
         margin: 25px 0;
-
         .icon {
           border: 1px solid lighten(@grey, 10%);
           border-radius: 200px;
-          margin: 0 5px;
+          margin: 0 2px;
           height: 40px;
           width: 40px;
           padding: 5px;
-
           i {
             position: relative;
             top: 4px;
@@ -850,9 +862,8 @@ header {
             font-size: 1.5rem;
           }
         }
-
-
       }
+
       p {
         color: lighten(@grey, 10%);
         font-size: 1.5rem;
@@ -871,10 +882,18 @@ header {
 
 
     @media screen and (max-width: 768px) {
+
+      // INDEX
       .rm-padding-xs {
         padding: 0 !important;
       }
 
+      #navTop {
+        padding: 0 15px;
+        form {
+          width: 100%;
+        }
+      }
 
       #estimer {
         #estimerText {
@@ -883,6 +902,7 @@ header {
           text-align: center;
           color: lighten(@grey, 100%);
           background-position: center;
+          height: 344px;
         }
       }
 
@@ -892,16 +912,21 @@ header {
 
       .illustration-container {
         margin-top: 0;
-
         .illustration {
           height: 387px !important;
         }
+      }
 
+      #weekend {
+        margin-bottom: 100px;
       }
 
       footer {
         margin-top: 43px;
+        .dropdown {
+          .menu-langue-devise {
+            width: 100%;
+          }
+        }
       }
-
-
     }
