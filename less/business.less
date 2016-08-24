@@ -4,7 +4,8 @@
   src: url(../fonts/CircularStd-Book.otf);
 }
 
-@grey : #484848;
+@text : #3e3e3e;
+@grey : #2D2D2D;
 @pink : #FF5A5F;
 @blue : #007A87;
 @purple : #7B0051;
@@ -15,12 +16,32 @@
 
 body {
   font-family: 'circular';
+  color: @text;
 }
+
+.bouton {
+  background-color: @pink;
+  color: lighten(@grey, 100%);
+  padding: 10px 30px;
+  border-radius: 1.5px;
+  box-shadow: 0 2px 0 darken(@pink, 10%);
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: 0.2s;
+  &:hover {
+    color: lighten(@grey, 100%);
+    text-decoration: none;
+    background-color: lighten(@pink, 10%);
+  }
+}
+
 
 #navTop {
   background-color: @grey;
   border: none;
   margin: 0;
+  padding: 0 !important;
+  border-radius: 0;
   li {
     padding: 5px;
     transition: 0.2s;
@@ -33,6 +54,25 @@ body {
       a {
         color: lighten(@grey, 100%);
       }
+    }
+    .active {
+      a {
+        color: lighten(@grey, 100%) !important;
+      }
+    }
+  }
+  figure {
+    background-image: url(../img/logo-airbnb.png);
+    height: 32px;
+    width: 197px;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    filter: brightness(100%);
+    span {
+      font-size: 2.3rem;
+      font-weight: bold;
     }
   }
 
@@ -50,16 +90,175 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  color: lighten(@grey, 100%);
+
+  h1 {
+    font-size: 6.5rem;
+    font-weight: bold;
+    width: 70%;
+    margin: 0;
+  }
+
+  h3 {
+    margin: 10px;
+  }
+  a {
+    margin-top: 30px;
+  }
+}
+
+
+.white-section {
+  padding-top: 80px;
+
+  .card {
+    margin-bottom: 80px;
+  }
+
+  .title {
+    margin-bottom: 80px;
+    font-weight: lighter;
+    h2 {
+      margin-top: 0;
+    }
+    p {
+      font-size: 1.5rem;
+    }
+    a {
+      color: @pink;
+    }
+  }
+
+  i {
+    font-size: 3.5rem;
+    color: lighten(@grey, 30%);
+  }
+
+  h4 {
+    margin-top: 0;
+    font-weight: bold;
+  }
+
+  p {
+    color: lighten(@grey, 30%);
+  }
 
 }
 
 
+.grey-section {
+  background-color: @grey;
+  color: lighten(@grey, 100%);
+
+  .text-container {
+    padding: 60px 50px;
+    box-sizing: border-box;
+    h2, h4 {
+      font-weight: bold;
+    }
+
+    .tiret {
+      width: 50px;
+      height: 3px;
+      background-color: lighten(@grey, 50%);
+      margin-top: 30px;
+    }
+
+    h4 {
+      margin-top: 30px;
+    }
+
+    p {
+      color: lighten(@grey, 50%);
+      font-size: 1.6rem;
+    }
+  }
+}
+
+#grey-section-01 {
+  figure {
+    box-sizing: border-box;
+    background-image:url(../img/business/bg-like-home.jpg);
+    height: 611px;
+    background-size: cover;
+  }
+}
+
+.center-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 80px 0;
+}
+
+#quote-section {
+  blockquote {
+    border: none;
+    font-size: 3.3rem;
+    font-weight: 100;
+    color: lighten(@grey, 20%);
+  }
+
+  figure {
+    background-image: url(../img/business/darragh-ormsby.jpg);
+    border-radius: 200px;
+    height: 60px;
+    width: 60px;
+    background-size: contain;
+    margin: 20px 0;
+  }
+
+  h5 {
+    font-weight: bold;
+  }
+
+  h5, h6 {
+    margin: 5px;
+    font-size: 1.5rem;
+  }
+
+  h6 {
+    color: lighten(@grey, 20%);
+  }
+}
 
 
+#grey-section-02 {
+  figure {
+    box-sizing: border-box;
+    background-image:url(../img/business/bg-business-travel.jpg);
+    height: 611px;
+    background-size: cover;
+  }
+}
 
+#grey-section-03 {
+  figure {
+    box-sizing: border-box;
+    background-image:url(../img/business/bg-occupe.jpg);
+    height: 611px;
+    background-size: cover;
+  }
+}
 
-
-
+#blue-section {
+  background-color: #007A87;
+  color: lighten(@grey, 100%);
+  i {
+    font-size: 10rem;
+  }
+  h2 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  p {
+    font-size: 1.5rem;
+    width: 80%;
+    color: lighten(@blue, 67%);
+    font-weight: lighter;
+  }
+}
 
 
 
@@ -69,7 +268,7 @@ footer {
   background-size: 40%;
   width: 100%;
   padding: 50px 0;
-  margin: 20px 0;
+  margin-bottom: 20px;
   color: lighten(@grey, 100%);
 
   .dropdown {
@@ -173,6 +372,7 @@ footer {
   p {
     color: lighten(@grey, 10%);
     font-size: 1.5rem;
+    margin: 0;
   }
 
   #xs-list {
