@@ -279,7 +279,7 @@ header {
         transition: 0.2s ease;
         &:hover {
           background-color: lighten(@pink, 10%);
-          border-top: 1px solid lighten(@pink, 10%);
+          border-top: 2px solid lighten(@pink, 10%);
         }
 
         p {
@@ -383,7 +383,12 @@ header {
       align-items: center;
       color: lighten(@grey, 100%);
       text-align: center;
+      box-shadow: inset 1500px 0px 0px 0px rgba(255, 255, 255, 0);
       transition: 0.3s ease;
+      &:hover {
+        box-shadow: inset 1500px 0px 0px 0px @transparentWhite;
+      }
+
       p {
         z-index: 5;
         font-size: 3rem;
@@ -401,11 +406,6 @@ header {
       h5 {
         font-size: 1.5rem;
         margin: 0;
-      }
-      transition: 0.3s ease;
-      &:hover {
-        background-blend-mode: lighten;
-        background-color: @transparentWhite;
       }
     }
   }
@@ -552,6 +552,22 @@ header {
     }
 
     } //FIN EXPLORER
+
+    // GUIDES
+    #guides {
+.illustration {
+background-position: center;
+}
+      #sanFransisco {
+        background-image: url(../img/guidesSanFransisco.jpg);
+      }
+      #newYork {
+        background-image: url(../img/guidesNewYork.jpg);
+      }
+      #londres02 {
+        background-image: url(../img/guidesLondres.jpg);
+      }
+    }
     } // FIN MAIN
 
     // CAROUSEL
@@ -655,30 +671,17 @@ header {
         background-size: cover;
         background-repeat: no-repeat;
         overflow: hidden;
-        position: relative;
         margin-bottom: 30px;
-
+        box-shadow: inset 300px 0px 0px 0px rgba(0, 0, 0, 0);
+        transition: 0.3s ease;
         &:hover {
-          .darken-card {
-            opacity: 0.6;
-          }
+          box-shadow: inset 1000px 0px 0px 0px @shadow-black;
           .etiquette {
             transform: translateY(0);
           }
           .card-link {
             text-decoration: underline;
           }
-        }
-        .darken-card {
-          opacity: 0;
-          height: 492px;
-          width: 100%;
-          position: absolute;
-          top: 0;
-          left: 0;
-          background-color: @shadow-black;
-          z-index: 0;
-          transition: 0.3s;
         }
 
         .card-content {
@@ -777,7 +780,7 @@ header {
           border: none;
           color: lighten(@grey, 100%);
           &:focus {
-            box-shadow: 0 0 10px lighten(@blue, 50%);
+            box-shadow: none;
             background-color: @grey !important;
           }
 
@@ -919,6 +922,12 @@ header {
 
       #weekend {
         margin-bottom: 100px;
+      }
+
+      #guides {
+        .title {
+          margin-top: 100px !important;
+        }
       }
 
       footer {
